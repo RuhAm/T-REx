@@ -183,7 +183,7 @@ The preprocessed files are going to be located at the following directory:
 3.2 To perform tensor decomposition using a rank specified by the user, please use the following command:
 
 ```bash
-$ Rscript TD_vcf.R <rank> <number of sweep train sample> <number of neutral train sample> <number of empirical test samples>
+$ Rscript TD_vcf.R <rank> <number of sweep train sample> <number of neutral train sample> <number of test samples>
 ```
 
 
@@ -206,13 +206,17 @@ Finally,  output probabilities from SVM will be saved in the "Probs_SVM.csv" fil
 
 
 
-## 3.0 Contribution
+## 4.0 Contribution
 
 This research work is supported by National Institutes of Health and National Science Foundation. 
 
 
-Manuscript written by, Md Ruhul Amin, Mahmudul Hasan, Sandipan Paul Arnab, Michael DeGiorgio
-Software: aminm2021@fau.edu
+Authors: Md Ruhul Amin, Mahmudul Hasan, Sandipan Paul Arnab, Michael DeGiorgio
+
+
+## 4.0 Contact 
+
+aminm2021@fau.edu
 
 
 

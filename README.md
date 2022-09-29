@@ -73,7 +73,7 @@ The first argument <number of files> is the number of files that the user wants 
 The preprocessed files are going to be located at the following directory:
 
    ```sh
-   "/T-REx/Data/CSV_files/""
+   "/T-REx/Data/CSV_files/"
    ```
 
 
@@ -113,7 +113,7 @@ The first argument <number of files> is the number of files that the user wants 
 2.3.4 The preprocessed files are going to be located at the following directory:
 
    ```sh
-   "/T-REx/Data/CSV_files/""
+   "/T-REx/Data/CSV_files/"
    ```
 
 
@@ -191,7 +191,7 @@ The first argument <number of files> is the number of files that the user wants 
 The preprocessed files are going to be located at the following directory:
 
    ```sh
-   "/T-REx/Data/VCF/CSV/""
+   "/T-REx/Data/VCF/CSV/"
    ```
 
 
@@ -209,7 +209,7 @@ This command will perform tensor decomposition using a rank supplied by the user
 The results will be saved in the following folder:
 
    ```sh
-   "/T-REx/Data/Results/Empirical/""
+   "/T-REx/Data/Results/Empirical/"
    ```
 
 For Elastic net- the output probabilities will be saved in the "Probs_EN.csv" file and the class prediction will be saved in the "Class_EN.csv" file.

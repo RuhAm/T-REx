@@ -61,14 +61,14 @@ neut_1.ms, neut_2.ms ... neut_100.ms
    ```sh
    $ Python3 train_ms.py <number of files> <class>
    ```
-The first argument <number of files> is the number of files that the user wants to preprocess. The second argument is the <class> which takes on 0 or 1 as value. 1 is going to preprocess sweep observations and 0 is going to preprocess neutral observations.
+The first argument <number of files> is the number of files that the user wants to preprocess. The second argument  <class> which takes on 0 or 1 as value. 1 is going to preprocess sweep observations and 0 is going to preprocess neutral observations.
 
 2.2.3 To preprocess the *.csv* files using our unique alignment processing strategy, please use the following commands:
 
    ```sh
    $ Python3 parse_train.py <number of files> <class>
    ```
-The first argument <number of files> is the number of files that the user wants to preprocess. The second argument is the <class> which takes on 0 or 1 as value. 1 is going to preprocess sweep observations and 0 is going to preprocess neutral observations.
+The first argument <number of files> is the number of files that the user wants to preprocess. The second argument is <class>, which takes on 0 or 1 as value. 1 is going to preprocess sweep observations and 0 is going to preprocess neutral observations.
 
 The preprocessed files are going to be located at "CSV_files" inside the "Data" folder. 
 

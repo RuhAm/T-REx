@@ -202,7 +202,7 @@ $ Rscript TD_vcf.R <rank> <number of sweep train sample> <number of neutral trai
 
 
 
-This command will perform tensor decomposition using a rank supplied by the user and train 3 classifiers (Elastic Net, Random Forest, Support Vector Machine) using example training data and output the probabilities of sweep using the example test data. 
+This command will perform tensor decomposition using a rank supplied by the user and train 3 classifiers (Elastic Net, Random Forest, Support Vector Machine) using example training data and output the probabilities of sweep using the empirical test data. 
 
    ```sh
    /T-REx/Data/Results/Empirical/

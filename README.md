@@ -146,7 +146,7 @@ Similarly, output probabilities from Random Forest classifier will be saved in t
 Finally,  output probabilities from SVM will be saved in the "Probs_SVM.csv" file and the class prediction will be saved in the "Class_SVM.csv" file. 
 
 ## 3.0 Working with empirical data (VCF files)
-To work with empirical data we need to keep the *.vcf* formatted file in the "VCF" folder inside the "Data" folder. One example file for chromosome 22 is given. The files should be named as follows: 
+3.1 To work with empirical data we need to keep the *.vcf* formatted file in the "VCF" folder inside the "Data" folder. One example file for chromosome 22 is given. The files should be named as follows: 
 
 ```bash
 CEU(chromosome number).vcf
@@ -186,6 +186,8 @@ For example, the following command will parse the "CEU22.vcf" file.
    $ Python3 Parse_vcf.py <number of files>
    ```
 The first argument <number of files> is the number of files that the user wants to preprocess.
+
+
 The preprocessed files are going to be located at the following directory:
 
    ```sh

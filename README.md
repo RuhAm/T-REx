@@ -159,7 +159,7 @@ CEU22.vcf
 
 
 
-3.1. the *.vcf* file needs to be converted into *.ms* files using the following command.
+3.1.1 The *.vcf* file needs to be converted into *.ms* files using the following command.
 
    ```sh
    $ Python3 VCF_ms.py <name of the VCF file> 

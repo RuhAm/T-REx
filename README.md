@@ -46,13 +46,13 @@ $ cd /Users/user/Desktop/T-REx
 2.2.1 The "Data" folder contains a folder named "MS_files_train". The *.ms* files for sweep and neutral observations need to be placed in this folder. There are 100 example files located in the folder. The sweep files should are named as follows:
 
 ```bash
-sweep_1.ms, sweep_2.ms ..... sweep_100.ms
+sweep_1.ms, sweep_2.ms ... sweep_100.ms
 ```
 
 The neutral files should are named as follows:
 
 ```bash
-neut_1.ms, neut_2.ms .... neut_100.ms
+neut_1.ms, neut_2.ms ... neut_100.ms
 ```
 
 

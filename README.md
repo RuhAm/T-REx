@@ -70,7 +70,13 @@ The first argument <number of files> is the number of files that the user wants 
    ```
 The first argument <number of files> is the number of files that the user wants to preprocess. The second argument is <class>, which takes on 0 or 1 as value. 1 is going to preprocess sweep observations and 0 is going to preprocess neutral observations.
 
-The preprocessed files are going to be located at "CSV_files" inside the "Data" folder. 
+The preprocessed files are going to be located at the following directory:
+
+   ```sh
+   /T-REx/Data/CSV_files/
+   ```
+
+
 
 2.3 Please use the following commands to preprocess the data in *.ms* format for sweep and neutral observations to be used for testing:
 
@@ -102,10 +108,9 @@ The first argument <number of files> is the number of files that the user wants 
    ```
 The first argument <number of files> is the number of files that the user wants to preprocess. The second argument is the <class> which takes on 0 or 1 as value. 1 is going to preprocess sweep observations and 0 is going to preprocess neutral observations.
 
-The preprocessed files are going to be located at "CSV_files" inside the "Data" folder. 
 
 
-The preprocessed files are going to be located at the following directory:
+2.3.4 The preprocessed files are going to be located at the following directory:
 
    ```sh
    /T-REx/Data/CSV_files/

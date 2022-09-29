@@ -137,9 +137,15 @@ neut_test_align_1.csv, neut_test_align_2.csv ...
 $ Rscript TD.R <rank> <number of sweep train sample> <number of neutral train sample> <number of sweep test sample> <number of neutral test sample>
 ```
 
-This command will perform tensor decomposition using a rank supplied by the user and train 3 classifiers (Elastic Net, Random Forest, Support Vector Machine) using example training data and output the probabilities of sweep using the example test data. The final output files will be saved in "Results" folder which is inside the "Data" folder. The output files will be named as follows: 
+This command will perform tensor decomposition using a rank supplied by the user and train 3 classifiers (Elastic Net, Random Forest, Support Vector Machine) using example training data and output the probabilities of sweep using the example test data. The final output files will be saved in the following directory:
 
-For Elastic net- the output probabilities will be saved in the "Probs_EN.csv" file and the class prediction will be saved in the "Class_EN.csv" file.
+   ```sh
+   "/Users/user/Desktop/T-REx/Data/Results/"
+   ```
+
+
+
+2.4.1 For Elastic net- the output probabilities will be saved in the "Probs_EN.csv" file and the class prediction will be saved in the "Class_EN.csv" file.
 
 Similarly, output probabilities from Random Forest classifier will be saved in the "Probs_RF.csv" file and the class prediction will be saved in the "Class_RF.csv" file. 
 
@@ -212,7 +218,7 @@ The results will be saved in the following folder:
    "/Users/user/Desktop/T-REx/Data/Results/Empirical/"
    ```
 
-For Elastic net- the output probabilities will be saved in the "Probs_EN.csv" file and the class prediction will be saved in the "Class_EN.csv" file.
+3.2.1 For Elastic net- the output probabilities will be saved in the "Probs_EN.csv" file and the class prediction will be saved in the "Class_EN.csv" file.
 
 Similarly, output probabilities from Random Forest classifier will be saved in the "Probs_RF.csv" file and the class prediction will be saved in the "Class_RF.csv" file. 
 

@@ -104,6 +104,14 @@ The first argument <number of files> is the number of files that the user wants 
 
 The preprocessed files are going to be located at "CSV_files" inside the "Data" folder. 
 
+
+The preprocessed files are going to be located at the following directory:
+
+   ```sh
+   /T-REx/Data/CSV_files/
+   ```
+
+
 The train files would be saved in the following pattern:
 
 ```bash

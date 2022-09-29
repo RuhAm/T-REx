@@ -10,7 +10,7 @@ To download and install *T-REx*, please follow the instructions below:
 
 Download the repository using git.
 ```
-git clone https:github.com/RuhAm/T-REx
+git clone https://github.com/RuhAm/T-REx.git
 ```
 
 *T-REx* uses R version 4.2.1 for the machine learning pipeline and Python3 for the data preprocessing. 

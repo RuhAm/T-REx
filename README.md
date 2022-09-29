@@ -206,11 +206,11 @@ $ Rscript TD_vcf.R <rank> <number of sweep train sample> <number of neutral trai
 
 This command will perform tensor decomposition using a rank supplied by the user and train 3 classifiers (Elastic Net, Random Forest, Support Vector Machine) using example training data and output the probabilities of sweep using the empirical test data. 
 
+The results will be saved in the following folder:
+
    ```sh
    /T-REx/Data/Results/Empirical/
    ```
-
-The output files will be named as follows: 
 
 For Elastic net- the output probabilities will be saved in the "Probs_EN.csv" file and the class prediction will be saved in the "Class_EN.csv" file.
 

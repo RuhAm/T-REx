@@ -13,7 +13,7 @@ Download the repository using git.
 git clone https://github.com/RuhAm/T-REx.git
 ```
 
-*T-REx* uses R version 4.2.1 for the machine learning pipeline and Python3 for the data preprocessing. 
+*T-REx* uses R version 4.2.1 for the machine learning pipeline and python3 for the data preprocessing. 
 
 
 
@@ -24,7 +24,7 @@ install.packages(c("abind", "MASS", "glmnet","rTensor","caret","ranger","tidyver
 ```
 install.packages("liquidSVM", repos="http://pnp.mathematik.uni-stuttgart.de/isa/steinwart/software/R")
 ```
-The following libraries need to be installed in a *Python3* environment.
+The following libraries need to be installed in a *python3* environment.
 ```
 pip install pandas numpy math scipy skimage scipy argparse
 ```
@@ -60,14 +60,14 @@ neut_1.ms, neut_2.ms ... neut_100.ms
 2.2.2 To preprocess the *.ms* files into *.csv* format please use the following commands.
 
    ```sh
-   $ Python3 train_ms.py <number of files> <class>
+   $ python3 train_ms.py <number of files> <class>
    ```
 The first argument <number of files> is the number of files that the user wants to preprocess. The second argument  <class> which takes on 0 or 1 as value. 1 is going to preprocess sweep observations and 0 is going to preprocess neutral observations.
 
 2.2.3 To preprocess the *.csv* files using our unique alignment processing strategy, please use the following commands:
 
    ```sh
-   $ Python3 parse_train.py <number of files> <class>
+   $ python3 parse_train.py <number of files> <class>
    ```
 The first argument <number of files> is the number of files that the user wants to preprocess. The second argument is <class>, which takes on 0 or 1 as value. 1 is going to preprocess sweep observations and 0 is going to preprocess neutral observations.
 
@@ -98,14 +98,14 @@ neut_1.ms, neut_2.ms ... neut_100.ms
 2.3.2 To preprocess the *.ms* files into *.csv* format please use the following commands.
 
    ```sh
-   $ Python3 train_ms.py <number of files> <class>
+   $ python3 train_ms.py <number of files> <class>
    ```
 The first argument <number of files> is the number of files that the user wants to preprocess. The second argument is the <class> which takes on 0 or 1 as value. 1 is going to preprocess sweep observations and 0 is going to preprocess neutral observations.
 
 2.3.3 To preprocess the *.csv* files using our unique alignment processing strategy, please use the following commands:
 
    ```sh
-   $ Python3 parse_test.py <number of files> <class>
+   $ python3 parse_test.py <number of files> <class>
    ```
 The first argument <number of files> is the number of files that the user wants to preprocess. The second argument is the <class> which takes on 0 or 1 as value. 1 is going to preprocess sweep observations and 0 is going to preprocess neutral observations.
 
@@ -153,7 +153,11 @@ Similarly, output probabilities from Random Forest classifier will be saved in t
 Finally,  output probabilities from SVM will be saved in the "Probs_SVM.csv" file and the class prediction will be saved in the "Class_SVM.csv" file. 
 
 ## 3.0 Working with empirical data (VCF files)
-3.1 To work with empirical data we need to keep the *.vcf* formatted file in the "VCF" folder inside the "Data" folder. One example file for chromosome 22 is given. The files should be named as follows: 
+3.1 To work with empirical data we need to keep the *.vcf* formatted file in the following folder:
+
+
+
+"VCF" folder inside the "Data" folder. One example file for chromosome 22 is given. The files should be named as follows: 
 
 ```bash
 CEU(chromosome number).vcf
@@ -169,12 +173,12 @@ CEU22.vcf
 3.1.1 The *.vcf* file needs to be converted into *.ms* files using the following command.
 
    ```sh
-   $ Python3 VCF_ms.py <name of the VCF file> 
+   $ python3 VCF_ms.py <name of the VCF file> 
    ```
 For example, the following command will parse the "CEU22.vcf" file.
 
    ```sh
-   $ Python3 VCF_ms.py CEU22
+   $ python3 VCF_ms.py CEU22
    ```
 3.1.2 the *.ms* files will be saved in the following directory:
 
@@ -184,13 +188,13 @@ For example, the following command will parse the "CEU22.vcf" file.
 3.1.3 To preprocess the *.ms* files into *.csv* format please use the following commands:
 
    ```sh
-   $ Python3 test_vcf.py
+   $ python3 test_vcf.py
    ```
 
 3.1.4 To preprocess the *.csv* files using our unique alignment processing strategy, please use the following commands:
 
    ```sh
-   $ Python3 Parse_vcf.py <number of files>
+   $ python3 Parse_vcf.py <number of files>
    ```
 The first argument <number of files> is the number of files that the user wants to preprocess.
 

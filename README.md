@@ -238,12 +238,18 @@ CEU22.vcf
 
 
 
-3.1.1 The *.vcf* file needs to be converted into *.ms* files using the following command.
+3.1.1 The *.vcf* file needs to be converted into *.ms* files using the following command. 
 
    ```sh
    $ python3 VCF_ms.py <name of the VCF file> 
    ```
-For example, the following command will parse the "CEU22.vcf" file.
+There is an example *.vcf* file named "CEU22.vcf" that is located in the following directory:
+
+  ```sh
+   "/Users/user/Desktop/T-REx/Data/VCF/"
+   ```
+   
+   For example, the following command will parse the "CEU22.vcf" file that is located in the following folder:
 
    ```sh
    $ python3 VCF_ms.py CEU22
@@ -266,6 +272,12 @@ For example, the following command will parse the "CEU22.vcf" file.
    ```
 The first argument <number of files> is the number of files that the user wants to preprocess.
 
+For example, the following command will parse 100 files. 
+
+  ```sh
+   $ python3 Parse_vcf.py 1000
+   ```
+
 
 The preprocessed files are going to be located at the following directory:
 
@@ -280,7 +292,12 @@ The preprocessed files are going to be located at the following directory:
 $ Rscript TD_vcf.R <rank> <number of sweep train sample> <number of neutral train sample> <number of test samples>
 ```
 
+For example, The following command would perform tensor decomposition using rank 5 with 100 sweep observations and 100 neutral observations for training and  100 test samples.
 
+
+```bash
+$ Rscript TD.R 5 100 100 100
+```
 
 
 This command will perform tensor decomposition using a rank supplied by the user and train 3 classifiers (Elastic Net, Random Forest, Support Vector Machine) using example training data and output the probabilities of sweep using the empirical test data. 
@@ -291,11 +308,14 @@ The results will be saved in the following folder:
    "/Users/user/Desktop/T-REx/Data/Results/Empirical/"
    ```
 
-3.2.1 For Elastic net- the output probabilities will be saved in the "Probs_EN.csv" file and the class prediction will be saved in the "Class_EN.csv" file.
 
-Similarly, output probabilities from Random Forest classifier will be saved in the "Probs_RF.csv" file and the class prediction will be saved in the "Class_RF.csv" file. 
 
-Finally,  output probabilities from SVM will be saved in the "Probs_SVM.csv" file and the class prediction will be saved in the "Class_SVM.csv" file. 
+
+3.2.1 For Elastic net- the output probabilities will be saved in the "Probs_EN.csv" file and the class prediction will be saved in the "Class_EN.csv" file inside the "Empirical" folder.
+
+Similarly, output probabilities from Random Forest classifier will be saved in the "Probs_RF.csv" file and the class prediction will be saved in the "Class_RF.csv" file inside the "Empirical" folder.
+
+Finally,  output probabilities from SVM will be saved in the "Probs_SVM.csv" file and the class prediction will be saved in the "Class_SVM.csv" file inside the "Empirical" folder.
 
 
 

@@ -30,7 +30,7 @@ pip install pandas numpy math scipy skimage scipy argparse
 ```
 
 
-## 2.0 Training and Testing from simulated data
+## 2.0 Training and Testing model from simulated data
 
 *T-REx* uses data in *.ms* format and converts them into haplotypes which is further downsampled into 64*64 dimensional matrix using the following commands.
 

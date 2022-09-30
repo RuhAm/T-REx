@@ -34,7 +34,7 @@ pip install pandas numpy math scipy skimage scipy argparse
 
 *T-REx* uses data in *.ms* format and converts them into haplotypes which is further downsampled into 64*64 dimensional matrix using the following commands.
 
-2.1 Once the repository is downloaded, please open a terminal at the *T-REx* directory. This can be acheived using the following commands given the repository is downloaded in the desktop folder. 
+2.1 Once the repository is downloaded, please open a terminal at the *T-REx* directory. For example,
 
 
 ```bash
@@ -43,19 +43,23 @@ $ cd /Users/user/Desktop/T-REx
 
 2.2 Please use the following commands to preprocess the data in *.ms* format for sweep and neutral observations to be used for training:
 
-2.2.1 The "Data" folder contains a folder named "MS_files_train". The *.ms* files for sweep and neutral observations need to be placed in this folder. There are 100 example files located in the folder. The sweep files should are named as follows:
+2.2.1 The "Data" folder contains a folder named "MS_files_train". The *.ms* files for sweep and neutral observations need to be placed in this folder. There are 100 example files located in the folder for each class.
+
+
+The 100 sweep files are named as follows:
 
 
 ```
 sweep_1.ms, sweep_2.ms ... sweep_100.ms
 ```
 
-The neutral files should are named as follows:
+The 100 neutral files are named as follows:
 
 ```
 neut_1.ms, neut_2.ms ... neut_100.ms
 ```
 
+Any additional files added by the user must follow the same pattern.
 
 2.2.2 To preprocess the *.ms* files into *.csv* format please use the following commands.
 
@@ -64,12 +68,39 @@ neut_1.ms, neut_2.ms ... neut_100.ms
    ```
 The first argument <number of files> is the number of files that the user wants to preprocess. The second argument  <class> which takes on 0 or 1 as value. 1 is going to preprocess sweep observations and 0 is going to preprocess neutral observations.
 
+For example, use the following command to preprocess the 100 sweep observations that are in *.ms* format.
+
+  ```sh
+   $ python3 train_ms.py 100 1
+   ```
+
+For example, use the following command to preprocess the 100 neutral observations that are in *.ms* format.
+
+  ```sh
+   $ python3 train_ms.py 100 0
+   ```
+
 2.2.3 To preprocess the *.csv* files using our unique alignment processing strategy, please use the following commands:
 
    ```sh
    $ python3 parse_train.py <number of files> <class>
    ```
+   
+   
 The first argument <number of files> is the number of files that the user wants to preprocess. The second argument is <class>, which takes on 0 or 1 as value. 1 is going to preprocess sweep observations and 0 is going to preprocess neutral observations.
+
+For example, use the following command to preprocess the 100 sweep observations that are in *.ms* format.
+
+  ```sh
+   $ python3 parse_train.py 100 1
+   ```
+
+For example, use the following command to preprocess the 100 neutral observations that are in *.ms* format.
+
+  ```sh
+   $ python3 parse_train.py 100 0
+   ```
+
 
 The preprocessed files are going to be located at the following directory:
 
@@ -77,6 +108,12 @@ The preprocessed files are going to be located at the following directory:
    "/Users/user/Desktop/T-REx/Data/CSV_files/"
    ```
 
+The train files would be saved in the following pattern:
+
+```
+sweep_train_align_1.csv, sweep_train_align_2.csv ...
+neut_train_align_1.csv, neut_train_align_2.csv ...
+```
 
 
 2.3 Please use the following commands to preprocess the data in *.ms* format for sweep and neutral observations to be used for testing:
@@ -98,9 +135,24 @@ neut_1.ms, neut_2.ms ... neut_100.ms
 2.3.2 To preprocess the *.ms* files into *.csv* format please use the following commands.
 
    ```sh
-   $ python3 train_ms.py <number of files> <class>
+   $ python3 test_ms.py <number of files> <class>
    ```
 The first argument <number of files> is the number of files that the user wants to preprocess. The second argument is the <class> which takes on 0 or 1 as value. 1 is going to preprocess sweep observations and 0 is going to preprocess neutral observations.
+
+
+For example, use the following command to preprocess the 100 sweep test observations that are in *.ms* format.
+
+  ```sh
+   $ python3 test_ms.py 100 1
+   ```
+
+For example, use the following command to preprocess the 100 neutral test observations that are in *.ms* format.
+
+  ```sh
+   $ python3 test_ms.py 100 0
+   ```
+
+
 
 2.3.3 To preprocess the *.csv* files using our unique alignment processing strategy, please use the following commands:
 
@@ -111,6 +163,22 @@ The first argument <number of files> is the number of files that the user wants 
 
 
 
+For example, use the following command to preprocess the 100 sweep observations that are in *.ms* format.
+
+  ```sh
+   $ python3 parse_test.py 100 1
+   ```
+
+For example, use the following command to preprocess the 100 neutral observations that are in *.ms* format.
+
+  ```sh
+   $ python3 parse_test.py 100 0
+   ```
+
+
+
+
+
 2.3.4 The preprocessed files are going to be located at the following directory:
 
    ```sh
@@ -118,14 +186,9 @@ The first argument <number of files> is the number of files that the user wants 
    ```
 
 
-The train files would be saved in the following pattern:
-
-```
-sweep_train_align_1.csv, sweep_train_align_2.csv ...
-neut_train_align_1.csv, neut_train_align_2.csv ...
-```
 
 The test files would be saved in the following pattern:
+
 ```
 sweep_test_align_1.csv, sweep_test_align_2.csv ...
 neut_test_align_1.csv, neut_test_align_2.csv ...

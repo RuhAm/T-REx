@@ -206,7 +206,12 @@ This command will perform tensor decomposition using a rank supplied by the user
    ```sh
    "/Users/user/Desktop/T-REx/Data/Results/"
    ```
+For example, The following command would perform tensor decomposition using rank 5 with 100 example files for each class for both training and testing.
 
+
+```bash
+$ Rscript TD.R 5 100 100 100 100
+```
 
 
 2.4.1 For Elastic net- the output probabilities will be saved in the "Probs_EN.csv" file and the class prediction will be saved in the "Class_EN.csv" file.

@@ -83,15 +83,15 @@ The preprocessed files are going to be located at the following directory:
 
 2.3.1 The "Data" folder contains a folder named "MS_files_test". The *.ms* files for sweep and neutral observations need to be placed in this folder using a prefix that are shown below. There are 100 example files located in the folder. The sweep files should are named as follows:
 
-``
+```
 sweep_1.ms, sweep_2.ms ... sweep_100.ms
-``
+```
 
 The neutral files should are named as follows:
 
-``
+```
 neut_1.ms, neut_2.ms ... neut_100.ms
-``
+```
 
 
 2.3.2 To preprocess the *.ms* files into *.csv* format please use the following commands.
@@ -119,13 +119,13 @@ The first argument <number of files> is the number of files that the user wants 
 
 The train files would be saved in the following pattern:
 
-```bash
+```
 sweep_train_align_1.csv, sweep_train_align_2.csv ...
 neut_train_align_1.csv, neut_train_align_2.csv ...
 ```
 
 The test files would be saved in the following pattern:
-```bash
+```
 sweep_test_align_1.csv, sweep_test_align_2.csv ...
 neut_test_align_1.csv, neut_test_align_2.csv ...
 ```

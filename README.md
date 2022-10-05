@@ -19,7 +19,7 @@ git clone https://github.com/RuhAm/T-REx.git
 
 The following libraries need to be installed in *R* environment.
 ```
-install.packages(c("abind", "MASS", "glmnet","rTensor","caret","ranger","tidyverse","ggpubr"))
+install.packages(c("abind", "MASS", "glmnet","rTensor","ranger"))
 ```
 ```
 install.packages("liquidSVM", repos="http://pnp.mathematik.uni-stuttgart.de/isa/steinwart/software/R")

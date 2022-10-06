@@ -98,7 +98,7 @@ for i in range(num_):
         print('NA')
     #pd.DataFrame(sortd).to_csv("/Volumes/MyPassport/Const Easy/Sweep/ALLaveraged_" + str(i) + ".csv")
     d=resize(sortd, (64, 64))
-    pd.DataFrame(d).to_csv("./Data/CSV_files/"+sub+"train_alignx_"+str(i+1)+".csv")
+    pd.DataFrame(d).to_csv("./Data/CSV_files/"+sub+"train_align_"+str(i+1)+".csv")
 #     print(i)
 
 

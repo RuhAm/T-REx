@@ -50,7 +50,7 @@ def addIndividuals(np_array):
 
 def saveToCSV(i):
     filename_ms = f"./Data/MS_files_train/{sub}{i+1}.ms"
-    filename_csv = f"./Data/MS_files_train/{sub}trainx_{i+1}.csv"
+    filename_csv = f"./Data/MS_files_train/{sub}train_{i+1}.csv"
 
     file = open(filename_ms, 'r')
     Lines = file.readlines()

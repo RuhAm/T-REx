@@ -26,9 +26,11 @@ install.packages("liquidSVM", repos="http://pnp.mathematik.uni-stuttgart.de/isa/
 ```
 The following libraries need to be installed in a *python3* environment.
 ```
-pip install pandas numpy math scipy skimage scipy argparse
+pip install pandas numpy scipy argparse
 ```
-
+```
+pip install -U scikit-image
+```
 
 ## 2.0 Training and Testing model from simulated data
 
@@ -38,7 +40,7 @@ pip install pandas numpy math scipy skimage scipy argparse
 
 
 ```bash
-$ cd /Users/user/Desktop/T-REx
+cd /Users/user/Desktop/T-REx
 ```
 
 2.2 Please use the following commands to preprocess the data in *.ms* format for sweep and neutral observations to be used for training:
@@ -64,26 +66,26 @@ Any additional files added by the user must follow the same pattern.
 2.2.2 To preprocess the *.ms* files into *.csv* format please use the following commands.
 
    ```sh
-   $ python3 train_ms.py <number of files> <class>
+   python3 train_ms.py <number of files> <class>
    ```
 The first argument <number of files> is the number of files that the user wants to preprocess. The second argument  <class> which takes on 0 or 1 as value. 1 is going to preprocess sweep observations and 0 is going to preprocess neutral observations.
 
 For example, use the following command to preprocess the 100 sweep observations that are in *.ms* format.
 
   ```sh
-   $ python3 train_ms.py 100 1
+   python3 train_ms.py 100 1
    ```
 
 For example, use the following command to preprocess the 100 neutral observations that are in *.ms* format.
 
   ```sh
-   $ python3 train_ms.py 100 0
+   python3 train_ms.py 100 0
    ```
 
 2.2.3 To preprocess the *.csv* files using our unique alignment processing strategy, please use the following commands:
 
    ```sh
-   $ python3 parse_train.py <number of files> <class>
+   python3 parse_train.py <number of files> <class>
    ```
    
    
@@ -92,13 +94,13 @@ The first argument <number of files> is the number of files that the user wants 
 For example, use the following command to preprocess the 100 sweep observations that are in *.ms* format.
 
   ```sh
-   $ python3 parse_train.py 100 1
+   python3 parse_train.py 100 1
    ```
 
 For example, use the following command to preprocess the 100 neutral observations that are in *.ms* format.
 
   ```sh
-   $ python3 parse_train.py 100 0
+   python3 parse_train.py 100 0
    ```
 
 
@@ -135,7 +137,7 @@ neut_1.ms, neut_2.ms ... neut_100.ms
 2.3.2 To preprocess the *.ms* files into *.csv* format please use the following commands.
 
    ```sh
-   $ python3 test_ms.py <number of files> <class>
+   python3 test_ms.py <number of files> <class>
    ```
 The first argument <number of files> is the number of files that the user wants to preprocess. The second argument is the <class> which takes on 0 or 1 as value. 1 is going to preprocess sweep observations and 0 is going to preprocess neutral observations.
 
@@ -143,13 +145,13 @@ The first argument <number of files> is the number of files that the user wants 
 For example, use the following command to preprocess the 100 sweep test observations that are in *.ms* format.
 
   ```sh
-   $ python3 test_ms.py 100 1
+   python3 test_ms.py 100 1
    ```
 
 For example, use the following command to preprocess the 100 neutral test observations that are in *.ms* format.
 
   ```sh
-   $ python3 test_ms.py 100 0
+   python3 test_ms.py 100 0
    ```
 
 
@@ -157,7 +159,7 @@ For example, use the following command to preprocess the 100 neutral test observ
 2.3.3 To preprocess the *.csv* files using our unique alignment processing strategy, please use the following commands:
 
    ```sh
-   $ python3 parse_test.py <number of files> <class>
+   python3 parse_test.py <number of files> <class>
    ```
 The first argument <number of files> is the number of files that the user wants to preprocess. The second argument is the <class> which takes on 0 or 1 as value. 1 is going to preprocess sweep observations and 0 is going to preprocess neutral observations.
 
@@ -166,13 +168,13 @@ The first argument <number of files> is the number of files that the user wants 
 For example, use the following command to preprocess the 100 sweep observations that are in *.ms* format.
 
   ```sh
-   $ python3 parse_test.py 100 1
+   python3 parse_test.py 100 1
    ```
 
 For example, use the following command to preprocess the 100 neutral observations that are in *.ms* format.
 
   ```sh
-   $ python3 parse_test.py 100 0
+   python3 parse_test.py 100 0
    ```
 
 
@@ -198,7 +200,7 @@ neut_test_align_1.csv, neut_test_align_2.csv ...
 2.4 To perform tensor decomposition using a rank specified by the user, please use the following command:
 
 ```bash
-$ Rscript TD.R <rank> <number of sweep train sample> <number of neutral train sample> <number of sweep test sample> <number of neutral test sample>
+Rscript TD.R <rank> <number of sweep train sample> <number of neutral train sample> <number of sweep test sample> <number of neutral test sample>
 ```
 
 This command will perform tensor decomposition using a rank supplied by the user and train 3 classifiers (Elastic Net, Random Forest, Support Vector Machine) using example training data and output the probabilities of sweep using the example test data. The final output files will be saved in the following directory:
@@ -210,7 +212,7 @@ For example, The following command would perform tensor decomposition using rank
 
 
 ```bash
-$ Rscript TD.R 5 100 100 100 100
+Rscript TD.R 5 100 100 100 100
 ```
 
 
@@ -241,7 +243,7 @@ CEU22.vcf
 3.1.1 The *.vcf* file needs to be converted into *.ms* files using the following command. 
 
    ```sh
-   $ python3 VCF_ms.py <name of the VCF file> 
+   python3 VCF_ms.py <name of the VCF file> 
    ```
 There is an example *.vcf* file named "CEU22.vcf" that is located in the following directory:
 
@@ -252,7 +254,7 @@ There is an example *.vcf* file named "CEU22.vcf" that is located in the followi
    For example, the following command will parse the "CEU22.vcf" file that is located in the following folder:
 
    ```sh
-   $ python3 VCF_ms.py CEU22
+   python3 VCF_ms.py CEU22
    ```
 3.1.2 the *.ms* files will be saved in the following directory:
 
@@ -262,20 +264,20 @@ There is an example *.vcf* file named "CEU22.vcf" that is located in the followi
 3.1.3 To preprocess the *.ms* files into *.csv* format please use the following commands:
 
    ```sh
-   $ python3 test_vcf.py
+   python3 test_vcf.py
    ```
 
 3.1.4 To preprocess the *.csv* files using our unique alignment processing strategy, please use the following commands:
 
    ```sh
-   $ python3 Parse_vcf.py <number of files>
+   python3 Parse_vcf.py <number of files>
    ```
 The first argument <number of files> is the number of files that the user wants to preprocess.
 
 For example, the following command will parse 100 files. 
 
   ```sh
-   $ python3 Parse_vcf.py 1000
+   python3 Parse_vcf.py 1000
    ```
 
 
@@ -289,14 +291,14 @@ The preprocessed files are going to be located at the following directory:
 3.2 To perform tensor decomposition using a rank specified by the user, please use the following command:
 
 ```bash
-$ Rscript TD_vcf.R <rank> <number of sweep train sample> <number of neutral train sample> <number of test samples>
+Rscript TD_vcf.R <rank> <number of sweep train sample> <number of neutral train sample> <number of test samples>
 ```
 
 For example, The following command would perform tensor decomposition using rank 5 with 100 sweep observations and 100 neutral observations for training and  100 test samples.
 
 
 ```bash
-$ Rscript TD.R 5 100 100 100
+Rscript TD.R 5 100 100 100
 ```
 
 

@@ -298,7 +298,7 @@ For example, The following command would perform tensor decomposition using rank
 
 
 ```bash
-Rscript TD.R 5 100 100 100
+Rscript TD_vcf.R 5 100 100 100
 ```
 
 

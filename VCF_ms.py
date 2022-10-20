@@ -20,10 +20,6 @@ with open(f'./Data/VCF/{fname}.vcf') as f:
 with open('./Data/VCF/MissSWP_test.txt') as f:
     lines1 = f.readlines()
 
-
-
-
-
 lines1[4] = 'segsites: 0\n'
 
 lines1[5]='positions: 0\n'
@@ -34,8 +30,6 @@ for i in range(1, len(lines)):
     w.append(k)
 
 w = np.asarray(w)
-
-
 
 w_=range(len(w))
 w_
